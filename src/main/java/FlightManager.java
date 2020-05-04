@@ -15,9 +15,18 @@ public class FlightManager {
         this.bagWeight = 15;
     }
 
-    public int passengerWeightAllowance(){
+    public int passengerWeightAllowance(Plane plane){
         return this.plane.getPlaneHoldWeight() / this.plane.getPlaneCapacity();
     }
+
+//    public int getPassengerBagWeight(ArrayList<Passenger> passengers) {
+//        int totalWeight = 0;
+//        for (int i = 0; i < flight.getPassengerCount(); i++)
+//            for (int n = 0;  passenger.getBags()){
+//                 totalWeight += passengerWeightAllowance(plane);
+//        }
+//             return totalWeight;
+//    }
 //    public int getLuggageWeight(){
 //        this.flight.getPassengerCount() * (this.passengers.getTotalBags());
 ////        this.bagWeight * this.passenger.getBags();

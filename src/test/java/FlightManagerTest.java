@@ -28,10 +28,17 @@ public class FlightManagerTest {
 
     @Test
     public void canGetPassengerAllowance(){
-        passengers.add(passenger1);
-        passengers.add(passenger2);
-        passengers.add(passenger3);
-        assertEquals(40, this.flightManager.passengerWeightAllowance());
+        assertEquals(20, this.flightManager.passengerWeightAllowance(plane));
+    }
+
+    @Test
+    public void canGetPassengerBagWeight(){
+        passenger1= new Passenger("Jim", 2);
+        passenger2= new Passenger("Tim", 2);
+        passenger3= new Passenger("Joe", 2);
+        passenger3= new Passenger("Ben", 2);
+        passenger3= new Passenger("Dan", 2);
+        assertEquals(90, this.flightManager.getPassengerBagWeight(this.passengers));
     }
 //    @Test
 //    public void canGetLuggageWeight(){
